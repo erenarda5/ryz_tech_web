@@ -55,7 +55,16 @@ export default function Footer() {
           {navGroups.map((group) => (
             <div key={group.title}>
               <h3 className="mb-4 font-semibold text-card-foreground">
-                {group.title}
+                {group.titleHref ? (
+                  <Link
+                    href={group.titleHref}
+                    className="hover:text-card-foreground/80"
+                  >
+                    {group.title}
+                  </Link>
+                ) : (
+                  group.title
+                )}
               </h3>
               <ul className="flex flex-col gap-2.5 text-sm">
                 {group.links.map((link) => (

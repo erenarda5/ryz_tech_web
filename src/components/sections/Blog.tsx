@@ -56,7 +56,7 @@ export default function Blog() {
       <div className="mt-10 text-center">
         <Link
           href="/blog"
-          className="inline-block rounded-full border border-foreground/20 px-6 py-2.5 text-sm font-semibold text-foreground"
+          className="inline-block rounded-full bg-brand-from px-6 py-2.5 text-sm font-semibold text-background"
         >
           Tüm Blog Yazılarını Gör
         </Link>

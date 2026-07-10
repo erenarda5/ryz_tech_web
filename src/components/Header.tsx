@@ -61,16 +61,39 @@ export default function Header() {
               type="button"
               aria-label="Menüyü kapat"
               onClick={() => setIsOpen(false)}
-              className="absolute right-8 top-10 z-10 flex h-10 w-10 items-center justify-center text-4xl leading-none text-card-foreground md:right-14 md:top-12"
+              className="absolute right-8 top-10 z-10 flex h-10 w-10 items-center justify-center text-card-foreground md:right-14 md:top-12"
             >
-              ×
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 4L20 20M20 4L4 20"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                />
+              </svg>
             </button>
             <div className="flex min-h-full flex-col justify-between gap-10 px-8 py-10 md:px-14 md:py-12">
               <nav className="flex flex-col gap-8 md:gap-10">
                 {navGroups.map((group) => (
                   <div key={group.title}>
                     <h3 className="mb-3 text-2xl font-semibold text-card-foreground">
-                      {group.title}
+                      {group.titleHref ? (
+                        <Link
+                          href={group.titleHref}
+                          onClick={() => setIsOpen(false)}
+                          className="hover:text-card-foreground/80"
+                        >
+                          {group.title}
+                        </Link>
+                      ) : (
+                        group.title
+                      )}
                     </h3>
                     <ul className="flex flex-col gap-2">
                       {group.links.map((link) => (

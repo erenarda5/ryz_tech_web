@@ -5,12 +5,14 @@ export type NavLink = {
 
 export type NavGroup = {
   title: string;
+  titleHref?: string;
   links: NavLink[];
 };
 
 export const navGroups: NavGroup[] = [
   {
     title: "Neler Yapıyoruz",
+    titleHref: "/neler-yapiyoruz",
     links: [
       { label: "Dijital Pazarlama", href: "/hizmetler/dijital-pazarlama" },
       {
