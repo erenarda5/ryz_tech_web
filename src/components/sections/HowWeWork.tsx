@@ -3,6 +3,9 @@ import Image from "next/image";
 const steps = [
   {
     number: "01",
+    numberImage: "/images/1-sayi.png",
+    numberWidth: 144,
+    numberHeight: 94,
     title: "Keşif",
     icon: "/icons/kesif-icon.png",
     width: 201,
@@ -12,6 +15,9 @@ const steps = [
   },
   {
     number: "02",
+    numberImage: "/images/2-sayi.png",
+    numberWidth: 141,
+    numberHeight: 94,
     title: "Strateji",
     icon: "/icons/strateji-icon.png",
     width: 191,
@@ -21,6 +27,9 @@ const steps = [
   },
   {
     number: "03",
+    numberImage: "/images/3-sayi.png",
+    numberWidth: 139,
+    numberHeight: 94,
     title: "Üretim",
     icon: "/icons/uretim-icon.png",
     width: 171,
@@ -30,6 +39,9 @@ const steps = [
   },
   {
     number: "04",
+    numberImage: "/images/4-sayi.png",
+    numberWidth: 144,
+    numberHeight: 94,
     title: "Optimizasyon",
     icon: "/icons/optimizasyon-icon.png",
     width: 148,
@@ -43,23 +55,27 @@ export default function HowWeWork() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-12 md:px-10">
       <h2 className="mb-8 font-semibold text-foreground">Nasıl Çalışıyoruz</h2>
-      <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4">
+      <div className="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-4">
         {steps.map((step) => (
           <div key={step.number}>
-            <Image
-              src={step.icon}
-              alt=""
-              width={step.width}
-              height={step.height}
-              className="h-28 w-auto object-contain"
-            />
-            <div className="relative mt-2">
-              <span
+            <div className="flex h-28 w-28 items-center justify-center">
+              <Image
+                src={step.icon}
+                alt=""
+                width={step.width}
+                height={step.height}
+                className="max-h-full max-w-full object-contain"
+              />
+            </div>
+            <div className="relative mt-3">
+              <Image
+                src={step.numberImage}
+                alt=""
                 aria-hidden
-                className="pointer-events-none absolute -left-1 -top-3 text-4xl font-semibold text-foreground/10"
-              >
-                {step.number}
-              </span>
+                width={step.numberWidth}
+                height={step.numberHeight}
+                className="pointer-events-none absolute -left-2 -top-7 h-16 w-auto opacity-40"
+              />
               <h3 className="relative font-semibold text-foreground">
                 {step.title}
               </h3>

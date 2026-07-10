@@ -20,12 +20,32 @@ export default function Footer() {
             height={96}
             className="h-auto w-32"
           />
-          <Image
-            src="/icons/footer-social-icons.png"
-            alt="Instagram, LinkedIn, RYZTECH Türkiye"
-            width={90}
-            height={26}
-          />
+          <div className="flex items-center gap-3">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <Image src="/icons/insta-icon.png" alt="" width={20} height={20} />
+            </a>
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <Image
+                src="/icons/linkedin-icon.png"
+                alt=""
+                width={20}
+                height={20}
+              />
+            </a>
+            <a href="#" aria-label="Türkçe">
+              <Image src="/icons/tr-icon.png" alt="" width={62} height={20} />
+            </a>
+          </div>
         </div>
 
         <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 md:gap-x-16">

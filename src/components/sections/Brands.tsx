@@ -23,14 +23,18 @@ export default function Brands() {
       <h2 className="mb-8 font-semibold text-foreground">Markalarımız</h2>
       <div className="flex flex-wrap items-center gap-x-14 gap-y-6">
         {brands.map((brand) => (
-          <Image
+          <div
             key={brand.alt}
-            src={brand.src}
-            alt={brand.alt}
-            width={brand.width}
-            height={brand.height}
-            className="h-8 w-auto object-contain md:h-9"
-          />
+            className="flex h-9 w-32 items-center justify-center md:h-10"
+          >
+            <Image
+              src={brand.src}
+              alt={brand.alt}
+              width={brand.width}
+              height={brand.height}
+              className="max-h-full max-w-full object-contain"
+            />
+          </div>
         ))}
       </div>
     </section>

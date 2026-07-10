@@ -21,7 +21,7 @@ export default function Testimonials() {
           type="button"
           disabled={!hasMultiple}
           aria-label="Önceki yorum"
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-from text-card-foreground disabled:opacity-40"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-from text-card-foreground disabled:cursor-default"
         >
           ‹
         </button>
@@ -39,7 +39,7 @@ export default function Testimonials() {
           type="button"
           disabled={!hasMultiple}
           aria-label="Sonraki yorum"
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-from text-card-foreground disabled:opacity-40"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-from text-card-foreground disabled:cursor-default"
         >
           ›
         </button>
