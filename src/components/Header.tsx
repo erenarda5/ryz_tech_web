@@ -21,26 +21,22 @@ export default function Header() {
           />
         </Link>
 
-        <button
-          type="button"
-          aria-label={isOpen ? "Menüyü kapat" : "Menüyü aç"}
-          aria-expanded={isOpen}
-          onClick={() => setIsOpen((v) => !v)}
-          className="relative z-[60] flex h-10 w-10 items-center justify-center"
-        >
-          {isOpen ? (
-            <span className="text-3xl leading-none text-card-foreground">
-              ×
-            </span>
-          ) : (
+        {!isOpen && (
+          <button
+            type="button"
+            aria-label="Menüyü aç"
+            aria-expanded={isOpen}
+            onClick={() => setIsOpen(true)}
+            className="flex h-10 w-10 items-center justify-center"
+          >
             <Image
               src="/icons/hamburger-menu.svg"
               alt=""
               width={28}
               height={20}
             />
-          )}
-        </button>
+          </button>
+        )}
       </div>
 
       {isOpen && (
@@ -58,6 +54,14 @@ export default function Header() {
               fill
               className="-z-10 object-cover"
             />
+            <button
+              type="button"
+              aria-label="Menüyü kapat"
+              onClick={() => setIsOpen(false)}
+              className="absolute right-8 top-10 z-10 flex h-10 w-10 items-center justify-center text-4xl leading-none text-card-foreground md:right-14 md:top-12"
+            >
+              ×
+            </button>
             <div className="flex min-h-full flex-col justify-between gap-10 px-8 py-10 md:px-14 md:py-12">
               <nav className="flex flex-col gap-8 md:gap-10">
                 {navGroups.map((group) => (

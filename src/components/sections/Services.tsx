@@ -24,7 +24,9 @@ const services = navGroups[0].links.map((link) => ({
 export default function Services() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-12 md:px-10">
-      <h2 className="mb-8 font-semibold text-foreground">Hizmetlerimiz</h2>
+      <h2 className="mb-8 text-2xl font-semibold text-foreground md:text-3xl">
+        Hizmetlerimiz
+      </h2>
       <div className="grid gap-6 md:grid-cols-2">
         {services.map((service) => (
           <div

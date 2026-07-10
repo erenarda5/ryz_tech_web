@@ -54,11 +54,13 @@ const steps = [
 export default function HowWeWork() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-12 md:px-10">
-      <h2 className="mb-8 font-semibold text-foreground">Nasıl Çalışıyoruz</h2>
+      <h2 className="mb-8 text-2xl font-semibold text-foreground md:text-3xl">
+        Nasıl Çalışıyoruz
+      </h2>
       <div className="grid grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-4">
         {steps.map((step) => (
           <div key={step.number}>
-            <div className="flex h-28 w-28 items-center justify-center">
+            <div className="mx-auto flex h-40 w-40 items-center justify-center">
               <Image
                 src={step.icon}
                 alt=""
