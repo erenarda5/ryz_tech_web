@@ -25,7 +25,7 @@ const services: Service[] = [
     href: "/hizmetler/dijital-pazarlama",
     description:
       "Meta, Google, TikTok, LinkedIn ve Yandex platformlarında ölçülebilir, tamamen optimize edilmiş reklam stratejileri kurguluyoruz. Veriye dayalı analitik içgörülerle, dijital pazarlama bütçenizi en yüksek yatırım getirisi sağlayacak şekilde yönetiyoruz.",
-    image: null,
+    image: "/images/dijital-pazarlama.png",
     stats: [
       { value: "4.2x", label: "Ortalama ROAS", sub: "+ 38%" },
       { value: "-41%", label: "CAC Düşüşü", sub: "YoY" },
@@ -61,7 +61,7 @@ const services: Service[] = [
     href: "/hizmetler/dijital-urun-ve-cozumler",
     description:
       "Shopify mağaza kurulumu ve dönüşüm oranı optimizasyonu (CRO) süreçlerinizi uçtan uca kurguluyoruz. Teknik altyapı entegrasyonları ve kullanıcı deneyimi iyileştirmeleriyle markanızın dijital varlığını ve satış performansını güçlendiriyoruz.",
-    image: null,
+    image: "/images/dijital-urun.png",
     stats: [
       { value: "+68%", label: "Dönüşüm Artışı", sub: "CRO Sonrası" },
       { value: "95+", label: "Sayfa Hızı", sub: "PageSpeed Skoru" },
@@ -87,9 +87,9 @@ const services: Service[] = [
       "Kullanıcı davranışlarını temel alarak, estetik ve işlevselliği bir arada sunan responsive arayüz tasarımları geliştiriyoruz. Wireframe mimarileri ve kullanıcı akış diyagramlarıyla, dijital varlıklarınızı kullanıcı dostu ve dönüşüm odaklı platformlara dönüştürüyoruz.",
     image: "/images/ui-ux.png",
     stats: [
-      { value: "Veri Eklenecek", label: "", sub: "6 Ayda" },
-      { value: "Veri Eklenecek", label: "", sub: "6 Ayda" },
-      { value: "Veri Eklenecek", label: "", sub: "6 Ayda" },
+      { value: "92", label: "Kullanılabilirlik Skoru", sub: "100 Üzerinden" },
+      { value: "-35%", label: "Hemen Çıkma Oranı", sub: "3 Ayda" },
+      { value: "+45%", label: "Sayfada Kalma Süresi", sub: "Ortalama" },
     ],
   },
 ];
