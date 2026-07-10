@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const testimonials = [
   {
     quote:
@@ -21,9 +23,9 @@ export default function Testimonials() {
           type="button"
           disabled={!hasMultiple}
           aria-label="Önceki yorum"
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-from text-card-foreground disabled:cursor-default"
+          className="shrink-0 disabled:cursor-default"
         >
-          ‹
+          <Image src="/icons/buton-sol.png" alt="" width={66} height={68} />
         </button>
 
         <div className="max-w-2xl text-center">
@@ -39,9 +41,9 @@ export default function Testimonials() {
           type="button"
           disabled={!hasMultiple}
           aria-label="Sonraki yorum"
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-from text-card-foreground disabled:cursor-default"
+          className="shrink-0 disabled:cursor-default"
         >
-          ›
+          <Image src="/icons/buton-sag.png" alt="" width={66} height={68} />
         </button>
       </div>
     </section>
