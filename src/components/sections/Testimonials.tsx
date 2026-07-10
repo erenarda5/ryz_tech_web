@@ -25,7 +25,13 @@ export default function Testimonials() {
           aria-label="Önceki yorum"
           className="shrink-0 disabled:cursor-default"
         >
-          <Image src="/icons/buton-sol.png" alt="" width={66} height={68} />
+          <Image
+            src="/icons/buton-sol.png"
+            alt=""
+            width={66}
+            height={68}
+            className="h-9 w-auto"
+          />
         </button>
 
         <div className="max-w-2xl text-center">
@@ -43,7 +49,13 @@ export default function Testimonials() {
           aria-label="Sonraki yorum"
           className="shrink-0 disabled:cursor-default"
         >
-          <Image src="/icons/buton-sag.png" alt="" width={66} height={68} />
+          <Image
+            src="/icons/buton-sag.png"
+            alt=""
+            width={66}
+            height={68}
+            className="h-9 w-auto"
+          />
         </button>
       </div>
     </section>

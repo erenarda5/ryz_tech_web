@@ -20,7 +20,7 @@ export default function Footer() {
             alt="RYZTECH Digital Agency"
             width={161}
             height={96}
-            quality={90}
+            quality={100}
             className="h-auto w-32"
           />
           <div className="flex items-center gap-3">

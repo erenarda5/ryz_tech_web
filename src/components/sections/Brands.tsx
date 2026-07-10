@@ -31,6 +31,7 @@ export default function Brands() {
             alt={brand.alt}
             width={brand.width}
             height={brand.height}
+            quality={100}
             className="h-auto w-32 object-contain md:w-40"
           />
         ))}
