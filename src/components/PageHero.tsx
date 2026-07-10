@@ -13,7 +13,7 @@ export default function PageHero({
   breadcrumbs?: Crumb[];
 }) {
   return (
-    <section className="relative isolate overflow-hidden pt-36 pb-16 md:pt-44 md:pb-20">
+    <section className="relative isolate flex min-h-[400px] flex-col justify-end overflow-hidden pb-16 md:min-h-[480px] md:pb-20">
       <Image
         src={image}
         alt=""
@@ -23,7 +23,7 @@ export default function PageHero({
         sizes="100vw"
         className="-z-10 object-cover"
       />
-      <div className="mx-auto max-w-7xl px-6 md:px-10">
+      <div className="mx-auto w-full max-w-7xl px-6 md:px-10">
         <h1 className="text-4xl font-bold text-card-foreground md:text-5xl">
           {title}
         </h1>
