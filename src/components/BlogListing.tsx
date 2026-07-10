@@ -55,17 +55,19 @@ export default function BlogListing({
         ))}
       </div>
 
-      {currentPosts.length > 0 ? (
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {currentPosts.map((post) => (
-            <BlogCard key={post.slug} post={post} />
-          ))}
-        </div>
-      ) : (
-        <p className="mt-10 text-foreground/60">
-          Bu kategoride henüz yazı bulunmuyor.
-        </p>
-      )}
+      <div className="mt-10 min-h-[220px]">
+        {currentPosts.length > 0 ? (
+          <div className="grid gap-6 md:grid-cols-2">
+            {currentPosts.map((post) => (
+              <BlogCard key={post.slug} post={post} />
+            ))}
+          </div>
+        ) : (
+          <p className="text-foreground/60">
+            Bu kategoride henüz yazı bulunmuyor.
+          </p>
+        )}
+      </div>
 
       {totalPages > 1 && (
         <div className="mt-10 flex justify-center gap-2">
