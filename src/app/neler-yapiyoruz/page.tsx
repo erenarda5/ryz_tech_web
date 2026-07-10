@@ -87,9 +87,9 @@ const services: Service[] = [
       "Kullanıcı davranışlarını temel alarak, estetik ve işlevselliği bir arada sunan responsive arayüz tasarımları geliştiriyoruz. Wireframe mimarileri ve kullanıcı akış diyagramlarıyla, dijital varlıklarınızı kullanıcı dostu ve dönüşüm odaklı platformlara dönüştürüyoruz.",
     image: "/images/ui-ux.png",
     stats: [
-      { value: "92", label: "Kullanılabilirlik Skoru", sub: "100 Üzerinden" },
-      { value: "-35%", label: "Hemen Çıkma Oranı", sub: "3 Ayda" },
-      { value: "+45%", label: "Sayfada Kalma Süresi", sub: "Ortalama" },
+      { value: "92", label: "UX Skoru", sub: "100 Üzerinden" },
+      { value: "-35%", label: "Bounce Rate", sub: "3 Ayda" },
+      { value: "+45%", label: "Time on Page", sub: "Ortalama" },
     ],
   },
 ];
