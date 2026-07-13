@@ -51,7 +51,7 @@ export default function BudgetCalculator() {
             <input
               type="text"
               inputMode="decimal"
-              placeholder="100.000 örn."
+              placeholder="200.000 örn."
               value={revenue}
               onChange={(e) => setRevenue(e.target.value)}
               className="w-full rounded-xl border border-foreground/15 bg-background px-4 py-3 pr-10 text-foreground outline-none focus:border-brand-to"
@@ -70,7 +70,7 @@ export default function BudgetCalculator() {
             <input
               type="text"
               inputMode="decimal"
-              placeholder="350 örn."
+              placeholder="400 örn."
               value={aov}
               onChange={(e) => setAov(e.target.value)}
               className="w-full rounded-xl border border-foreground/15 bg-background px-4 py-3 pr-10 text-foreground outline-none focus:border-brand-to"
@@ -89,7 +89,7 @@ export default function BudgetCalculator() {
             <input
               type="text"
               inputMode="decimal"
-              placeholder="2.20 örn."
+              placeholder="3 örn."
               value={cpc}
               onChange={(e) => setCpc(e.target.value)}
               className="w-full rounded-xl border border-foreground/15 bg-background px-4 py-3 pr-10 text-foreground outline-none focus:border-brand-to"

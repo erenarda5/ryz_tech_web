@@ -64,7 +64,7 @@ export default function RoasCalculator() {
             <input
               type="text"
               inputMode="decimal"
-              placeholder="500 örn."
+              placeholder="1.000 örn."
               value={price}
               onChange={(e) => setPrice(e.target.value)}
               className="w-full rounded-xl border border-foreground/15 bg-background px-4 py-3 pr-10 text-foreground outline-none focus:border-brand-to"
