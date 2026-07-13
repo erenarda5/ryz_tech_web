@@ -78,11 +78,11 @@ export default function Header() {
                 />
               </svg>
             </button>
-            <div className="flex min-h-full flex-col justify-center gap-12 px-8 py-10 md:px-14 md:py-12">
-              <nav className="grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-3">
+            <div className="flex min-h-full flex-col justify-center gap-8 overflow-y-auto px-8 py-10 md:px-14 md:py-12">
+              <nav className="flex flex-col gap-6 md:gap-8">
                 {navGroups.map((group) => (
                   <div key={group.title}>
-                    <h3 className="mb-4 text-2xl font-bold text-card-foreground md:text-3xl">
+                    <h3 className="mb-2 text-xl font-bold text-card-foreground md:text-2xl">
                       {group.titleHref ? (
                         <Link
                           href={group.titleHref}
@@ -95,13 +95,13 @@ export default function Header() {
                         group.title
                       )}
                     </h3>
-                    <ul className="flex flex-col gap-3">
+                    <ul className="flex flex-col gap-1.5">
                       {group.links.map((link) => (
                         <li key={link.href}>
                           <Link
                             href={link.href}
                             onClick={() => setIsOpen(false)}
-                            className="text-base font-medium text-card-foreground/90 hover:text-card-foreground md:text-lg"
+                            className="text-base text-card-foreground/90 hover:text-card-foreground"
                           >
                             {link.label}
                           </Link>
