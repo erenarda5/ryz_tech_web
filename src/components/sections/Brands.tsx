@@ -1,19 +1,33 @@
 import Image from "next/image";
 
 const brands = [
-  { src: "/icons/loles-logo.png", alt: "Lole's", width: 168, height: 45 },
+  {
+    src: "/icons/loles-logo.png",
+    alt: "Lole's",
+    width: 168,
+    height: 45,
+    className: "h-8 w-auto object-contain md:h-10",
+  },
   {
     src: "/icons/gods-logo.png",
     alt: "Gods Next Door",
     width: 272,
     height: 38,
+    className: "h-[27px] w-auto object-contain md:h-[34px]",
   },
-  { src: "/icons/momenta-logo.png", alt: "Momenta", width: 266, height: 32 },
+  {
+    src: "/icons/momenta-logo.png",
+    alt: "Momenta",
+    width: 266,
+    height: 32,
+    className: "h-6 w-auto object-contain md:h-[31px]",
+  },
   {
     src: "/icons/michaels-logo.png",
     alt: "Michael's",
     width: 265,
     height: 39,
+    className: "h-7 w-auto object-contain md:h-[35px]",
   },
 ];
 
@@ -32,7 +46,7 @@ export default function Brands() {
             width={brand.width}
             height={brand.height}
             quality={100}
-            className="h-8 w-auto object-contain md:h-10"
+            className={brand.className}
           />
         ))}
       </div>
