@@ -134,7 +134,7 @@ export default async function ServicePage({
             </div>
 
             <Link
-              href="/iletisim"
+              href="/ucretsiz-teklif"
               className="inline-block rounded-2xl bg-cta px-6 py-3 text-center font-semibold text-card-foreground transition hover:opacity-90"
             >
               Ücretsiz Teklif Al

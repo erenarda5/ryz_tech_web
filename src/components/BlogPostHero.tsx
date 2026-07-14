@@ -26,7 +26,7 @@ export default function BlogPostHero({
         <h1 className="max-w-3xl text-4xl font-bold text-card-foreground md:text-5xl">
           {title}
         </h1>
-        <div className="mt-4 flex items-center gap-4 text-sm text-card-foreground/80">
+        <div className="mt-5 flex items-center gap-4 text-sm text-card-foreground/80">
           <span className="flex items-center gap-1.5">
             <Image
               src="/icons/takvim-white.svg"
@@ -46,7 +46,7 @@ export default function BlogPostHero({
             {readTime}
           </span>
         </div>
-        <div className="mt-6 flex flex-wrap gap-3">
+        <div className="mt-5 flex flex-wrap gap-3">
           {tags.map((tag) => (
             <span
               key={tag}

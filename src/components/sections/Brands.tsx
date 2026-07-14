@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 const brands = [
   {
@@ -32,12 +35,49 @@ const brands = [
 ];
 
 export default function Brands() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [atStart, setAtStart] = useState(true);
+  const [atEnd, setAtEnd] = useState(true);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    function check() {
+      if (!el) return;
+      setAtStart(el.scrollLeft < 8);
+      setAtEnd(el.scrollWidth - el.clientWidth - el.scrollLeft < 8);
+    }
+
+    check();
+    el.addEventListener("scroll", check);
+    const observer = new ResizeObserver(check);
+    observer.observe(el);
+
+    return () => {
+      el.removeEventListener("scroll", check);
+      observer.disconnect();
+    };
+  }, []);
+
+  const maskImage = atStart
+    ? atEnd
+      ? "none"
+      : "linear-gradient(to right, black 80%, transparent 100%)"
+    : atEnd
+      ? "linear-gradient(to right, transparent 0%, black 20%)"
+      : "linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)";
+
   return (
-    <section className="mx-auto max-w-7xl px-6 py-12 md:px-10">
+    <section className="mx-auto max-w-7xl px-6 pt-12 pb-4 md:px-10">
       <h2 className="mb-8 text-2xl font-semibold text-foreground md:text-3xl">
         Markalarımız
       </h2>
-      <div className="flex flex-wrap items-center justify-between gap-x-10 gap-y-8">
+      <div
+        ref={scrollRef}
+        style={{ WebkitMaskImage: maskImage, maskImage }}
+        className="flex items-center gap-x-10 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] md:flex-wrap md:justify-between md:gap-y-8 md:overflow-visible [&::-webkit-scrollbar]:hidden"
+      >
         {brands.map((brand) => (
           <Image
             key={brand.alt}
@@ -46,7 +86,7 @@ export default function Brands() {
             width={brand.width}
             height={brand.height}
             quality={100}
-            className={brand.className}
+            className={`shrink-0 ${brand.className}`}
           />
         ))}
       </div>

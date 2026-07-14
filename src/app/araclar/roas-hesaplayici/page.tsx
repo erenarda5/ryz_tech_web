@@ -57,14 +57,22 @@ export default function RoasHesaplayiciPage() {
               Başabaş ROAS Nasıl Hesaplanır?
             </h2>
             <p className="mt-3 text-foreground/80">
-              Formül basittir: önce ürün maliyeti, kargo &amp; paketleme,
-              komisyon ücretleri ve diğer giderlerinizi toplayarak toplam
-              maliyetinizi bulursunuz. Ardından satış fiyatınızı bu toplam
-              maliyete bölerek başabaş ROAS değerinizi elde edersiniz.
+              Önce ürün maliyeti, kargo &amp; paketleme, komisyon ücretleri ve
+              diğer giderlerinizi toplayarak toplam maliyetinizi bulursunuz.
+              Satış fiyatınızdan bu toplam maliyeti çıkardığınızda, reklam
+              harcamasından önceki net kârınıza ulaşırsınız — başabaş
+              noktasında reklama harcayabileceğiniz üst sınır tam olarak bu
+              kâr kadardır. ROAS, gelirinizi reklam harcamanıza böldüğünüz
+              için başabaş ROAS'ı bulmak üzere satış fiyatınızı bu net kâra
+              bölersiniz.
+            </p>
+            <p className="mt-3 text-foreground/80">
               Örneğin 500 TL'ye sattığınız bir ürünün toplam maliyeti 300 TL
-              ise, başabaş ROAS değeriniz 500 ÷ 300 = 1.66'dır — reklam
-              kampanyanız bu değerin altına düştüğünde zarar etmeye
-              başlarsınız.
+              ise, net kârınız 200 TL'dir. Başabaş ROAS değeriniz 500 ÷ 200 =
+              2.5'tir — yani bu üründe kâra geçmek için her 1 TL'lik reklam
+              harcamasından en az 2.5 TL gelir elde etmeniz gerekir. Bu
+              değerin altına düşen bir ROAS, o satışta zarar ettiğiniz
+              anlamına gelir.
             </p>
           </section>
 

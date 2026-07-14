@@ -14,7 +14,7 @@ export default function RoasCalculator() {
   const [other, setOther] = useState("");
   const [result, setResult] = useState<{
     totalCost: number;
-    breakEvenRoas: number;
+    breakEvenRoas: number | null;
     netProfit: number;
   } | null>(null);
 
@@ -33,8 +33,11 @@ export default function RoasCalculator() {
       setResult(null);
       return;
     }
-    const breakEvenRoas = p / totalCost;
     const netProfit = p - totalCost;
+    // ROAS = Gelir / Reklam Harcaması. Başabaş noktasında reklam harcamanız
+    // net kârınıza (fiyat - toplam maliyet) eşit olur, bu yüzden doğru
+    // formül fiyatı toplam maliyete değil, net kâra bölmektir.
+    const breakEvenRoas = netProfit > 0 ? p / netProfit : null;
     setResult({ totalCost, breakEvenRoas, netProfit });
   }
 
@@ -133,22 +136,37 @@ export default function RoasCalculator() {
 
       {result && (
         <div className="mt-8 rounded-2xl bg-background p-6 text-center">
-          <p className="text-sm text-foreground/60">Minimum (Başabaş) ROAS Değeriniz</p>
-          <p className="mt-1 text-3xl font-bold text-foreground">
-            {result.breakEvenRoas.toFixed(2)}x
-          </p>
-          <div className="mt-4 flex flex-col gap-1 text-sm text-foreground/70">
-            <p>Toplam maliyetiniz: {formatTL(result.totalCost)} ₺</p>
-            <p>
-              Reklamsız net kârınız:{" "}
-              {result.netProfit >= 0
-                ? `${formatTL(result.netProfit)} ₺`
-                : `${formatTL(result.netProfit)} ₺ (zarar)`}
-            </p>
-          </div>
-          <p className="mt-4 text-sm font-semibold text-cta">
-            Bu oranın altındaki ROAS değerleri zarara yol açar.
-          </p>
+          {result.breakEvenRoas !== null ? (
+            <>
+              <p className="text-sm text-foreground/60">
+                Minimum (Başabaş) ROAS Değeriniz
+              </p>
+              <p className="mt-1 text-3xl font-bold text-foreground">
+                {result.breakEvenRoas.toFixed(2)}x
+              </p>
+              <div className="mt-4 flex flex-col gap-1 text-sm text-foreground/70">
+                <p>Ürün başına toplam maliyetiniz: {formatTL(result.totalCost)} ₺</p>
+                <p>Reklamsız net kârınız: {formatTL(result.netProfit)} ₺</p>
+              </div>
+              <p className="mt-4 text-sm font-semibold text-cta">
+                Bu oranın altındaki ROAS değerleri zarara yol açar.
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="text-sm text-foreground/60">Sonuç</p>
+              <p className="mt-1 text-xl font-bold text-cta">
+                Bu maliyetlerle kâr marjınız yok
+              </p>
+              <p className="mt-4 text-sm text-foreground/70">
+                Ürün başına toplam maliyetiniz ({formatTL(result.totalCost)}{" "}
+                ₺) satış fiyatınıza eşit veya ondan yüksek. Reklam
+                harcamasından bağımsız olarak hiçbir ROAS değeri bu satışı
+                kârlı hale getiremez — önce fiyat veya maliyet
+                kalemlerinizi gözden geçirmeniz gerekir.
+              </p>
+            </>
+          )}
         </div>
       )}
     </div>

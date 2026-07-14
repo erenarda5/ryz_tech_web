@@ -22,15 +22,14 @@ export default function Hero() {
           </span>
         </h1>
         <p className="mt-6 max-w-xl font-semibold text-card-foreground/90">
-          Kaydırılıp geçilen değil, durup izlenen işler üretiyoruz.
-          Yaratıcılığı veriyle besleyerek bütçenizin karşılığını fazlasıyla
-          veriyoruz.
+          Reklam, kreatif prodüksiyon ve pazaryeri yönetimini verilerle
+          optimize ediyor, markanızı hızlıca büyütüyoruz.
         </p>
         <Link
-          href="/iletisim"
+          href="/ucretsiz-teklif"
           className="mt-8 inline-block rounded-2xl bg-cta px-6 py-3 font-semibold text-card-foreground transition hover:opacity-90"
         >
-          İletişime Geç
+          Ücretsiz Teklif Al
         </Link>
       </div>
     </section>

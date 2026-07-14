@@ -3,6 +3,11 @@ export type CaseStudy = {
   title: string;
   cardTitle: string;
   cardSummary: string;
+  logo: string;
+  logoWidth: number;
+  logoHeight: number;
+  logoMaxHeight?: string;
+  website: string;
   tags: string[];
   highlights: { title: string; sub: string }[];
   summary: string;
@@ -18,6 +23,11 @@ export const caseStudies: CaseStudy[] = [
     cardTitle: "Lole's Growth Engine",
     cardSummary:
       "Doğal bakım markasının Türkiye pazarına girişini ve büyüme sistemini kurduk.",
+    logo: "/icons/loles-case.png",
+    logoWidth: 1211,
+    logoHeight: 476,
+    logoMaxHeight: "max-h-8",
+    website: "https://loles.com.tr/",
     tags: ["Meta Ads", "Google Ads", "Shopify", "UGC", "Kreatif Strateji"],
     highlights: [
       { title: "3 Kanal Kurulumu", sub: "Meta, Google, Shopify" },
@@ -38,6 +48,10 @@ export const caseStudies: CaseStudy[] = [
     cardTitle: "Michael's Growth Engine",
     cardSummary:
       "Shopify üzerinden web sitesi kurulumu ve dijital büyüme altyapısı oluşturduk.",
+    logo: "/icons/michaels-logo-case.png",
+    logoWidth: 265,
+    logoHeight: 39,
+    website: "https://www.michaelsofficial.com/tr",
     tags: ["Shopify", "Web Tasarım", "Meta Ads", "Google Ads", "E-ticaret"],
     highlights: [
       { title: "Satışa Hazır Altyapı", sub: "Shopify Kurulumu" },
@@ -58,6 +72,10 @@ export const caseStudies: CaseStudy[] = [
     cardTitle: "Momenta Yaşam Growth Engine",
     cardSummary:
       "Satış süreçlerini uçtan uca yönetip ROAS ve dönüşüm hedeflerine odaklandık.",
+    logo: "/icons/momenta-logo-case2.png",
+    logoWidth: 3823,
+    logoHeight: 528,
+    website: "https://momentasaglik.com/",
     tags: ["Meta Ads", "AIGC", "Raporlama", "Kampanya Stratejisi"],
     highlights: [
       { title: "AIGC Kreatif Hız", sub: "AI Destekli Üretim Sistemi" },
@@ -78,6 +96,10 @@ export const caseStudies: CaseStudy[] = [
     cardTitle: "Gods Next Door Growth Engine",
     cardSummary:
       "360° pazarlama yaklaşımıyla sıfırdan 6 haneli ciro seviyesine taşıdık.",
+    logo: "/icons/gods-logo-case.png",
+    logoWidth: 272,
+    logoHeight: 38,
+    website: "https://www.godsnextdoor.com/",
     tags: [
       "Meta Ads",
       "İçerik Yönetimi",

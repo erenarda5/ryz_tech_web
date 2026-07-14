@@ -13,7 +13,7 @@ export default function CtaBanner() {
         </p>
       </div>
       <Link
-        href="/iletisim"
+        href="/ucretsiz-teklif"
         className="inline-block shrink-0 rounded-2xl bg-cta px-6 py-3 font-semibold text-card-foreground transition hover:opacity-90"
       >
         Ücretsiz Teklif Al

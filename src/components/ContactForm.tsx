@@ -8,16 +8,35 @@ export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
   const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">(
+    "idle",
+  );
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const subject = encodeURIComponent(
-      `Yeni Proje Talebi${company ? ` - ${company}` : ""}`,
-    );
-    const body = encodeURIComponent(
-      `İsim: ${firstName} ${lastName}\nE-posta: ${email}\nWeb Sitesi / Şirket Adı: ${company}\n\nMesaj:\n${message}`,
-    );
-    window.location.href = `mailto:info@ryztechdigital.com?subject=${subject}&body=${body}`;
+    setStatus("loading");
+
+    const subject = `Yeni Proje Talebi${company ? ` - ${company}` : ""}`;
+    const text = `İsim: ${firstName} ${lastName}\nE-posta: ${email}\nWeb Sitesi / Şirket Adı: ${company}\n\nMesaj:\n${message}`;
+
+    try {
+      const res = await fetch("/api/send-mail", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ subject, text, replyTo: email }),
+      });
+
+      if (!res.ok) throw new Error("Gönderim başarısız");
+
+      setStatus("success");
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setCompany("");
+      setMessage("");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -87,10 +106,23 @@ export default function ContactForm() {
 
         <button
           type="submit"
-          className="mt-2 self-start rounded-2xl bg-cta px-8 py-3 font-semibold text-card-foreground transition hover:opacity-90"
+          disabled={status === "loading"}
+          className="mt-2 self-start rounded-2xl bg-cta px-8 py-3 font-semibold text-card-foreground transition hover:opacity-90 disabled:opacity-60"
         >
-          Gönder
+          {status === "loading" ? "Gönderiliyor..." : "Gönder"}
         </button>
+
+        {status === "success" && (
+          <p className="text-sm font-semibold text-green-600">
+            Mesajınız gönderildi, en kısa sürede size dönüş yapacağız.
+          </p>
+        )}
+        {status === "error" && (
+          <p className="text-sm font-semibold text-cta">
+            Bir şeyler ters gitti, lütfen tekrar deneyin veya bizi doğrudan
+            arayın.
+          </p>
+        )}
       </form>
     </div>
   );

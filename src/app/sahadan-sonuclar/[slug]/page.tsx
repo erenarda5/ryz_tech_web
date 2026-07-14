@@ -36,9 +36,37 @@ export default async function CaseStudyPage({
 
   return (
     <>
-      <CaseStudyHero title={study.title} tags={study.tags} />
+      <CaseStudyHero
+        title={study.title}
+        tags={study.tags}
+        website={study.website}
+      />
 
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
+        <div className="mx-auto mb-8 max-w-3xl">
+          <Link
+            href="/sahadan-sonuclar"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:opacity-70"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 12H5M5 12L12 19M5 12L12 5"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            Tüm Projeleri Görüntüle
+          </Link>
+        </div>
+
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
           {study.highlights.map((h) => (
             <div

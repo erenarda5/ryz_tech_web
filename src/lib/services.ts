@@ -106,11 +106,6 @@ export const services: Service[] = [
         answer:
           "Evet, marka renkleri, tonu ve görsel dilinize göre özel prompt ve stil rehberleri oluşturarak üretim yapıyoruz.",
       },
-      {
-        question: "Kaç varyasyon üretiyorsunuz?",
-        answer:
-          "Test döngüsü başına genellikle 8-12 kreatif varyasyon üretip performansa göre eliyoruz.",
-      },
     ],
   },
   {
@@ -141,11 +136,6 @@ export const services: Service[] = [
     ],
     faqs: [
       {
-        question: "Hangi pazaryerlerinde hizmet veriyorsunuz?",
-        answer:
-          "Amazon, Trendyol ve Hepsiburada'da aktif yönetim sağlıyoruz, talep halinde diğer platformlar için de değerlendirme yapıyoruz.",
-      },
-      {
         question: "Ürün listelemelerini siz mi oluşturuyorsunuz?",
         answer:
           "Evet, SEO uyumlu başlık, açıklama ve görsel önerileriyle listeleme optimizasyonunu biz yürütüyoruz.",
@@ -167,14 +157,13 @@ export const services: Service[] = [
     title: "Dijital Ürün ve Çözümler",
     heroImage: "/images/dijital-urun-hero.png",
     intro: [
-      "Shopify mağaza kurulumu ve dönüşüm oranı optimizasyonu (CRO) süreçlerinizi uçtan uca kurguluyoruz. Teknik altyapı entegrasyonları ve kullanıcı deneyimi iyileştirmeleriyle markanızın dijital varlığını ve satış performansını güçlendiriyoruz.",
-      "Kullanıcı yolculuğunu ve dönüşüm noktalarını analiz ederek hızlı, SEO uyumlu ve dönüşüm odaklı bir altyapı kuruyoruz. Sayfa hızından ödeme akışına kadar her adımı performans verisiyle iyileştiriyoruz.",
+      "İnsanların gerçek ihtiyaçlarına yönelik, verimliliği artıran ve iş süreçlerini kolaylaştıran web tabanlı uygulamalar geliştiriyoruz. Fikir aşamasından yayına almaya kadar, kullanıcı ihtiyacını merkeze alan, ölçeklenebilir ve sürdürülebilir dijital ürünler tasarlıyoruz.",
+      "Her projeye önce problemi anlayarak başlarız: kullanıcılarınızın gerçekte neye ihtiyaç duyduğunu, mevcut süreçlerin nerede tıkandığını tespit eder, çözümü buna göre kurgularız. Teknik altyapıdan kullanıcı deneyimine kadar her katmanı performans ve kullanılabilirlik odaklı inşa ederiz.",
     ],
     approach: [
       "Teknik altyapıyı önce sağlamlaştırır, sonra optimize ederiz: sayfa hızı, mobil uyumluluk ve ödeme akışındaki sürtünmeleri tespit edip gideririz. Her değişikliği A/B testiyle doğrulayıp veriyle karar veririz.",
     ],
     tools: [
-      "Shopify",
       "Next.js",
       "Google Tag Manager",
       "PageSpeed Insights",
@@ -182,27 +171,26 @@ export const services: Service[] = [
       "Vercel",
     ],
     deliverables: [
-      "Yayına hazır web sitesi veya mağaza",
+      "Kullanıma hazır uygulama",
       "Teknik dokümantasyon ve eğitim",
-      "CRO analiz ve öneri raporu",
       "Hız testi ve performans raporu",
       "3 ay teknik destek",
     ],
     faqs: [
       {
-        question: "Mevcut Shopify mağazamı da geliştirebilir misiniz?",
+        question: "Ne tür web tabanlı uygulamalar geliştiriyorsunuz?",
         answer:
-          "Evet, sıfırdan kurulum kadar mevcut mağazaların CRO ve performans odaklı revizyonunu da yapıyoruz.",
+          "İç süreç yönetim araçlarından müşteri panellerine, özel hesaplama araçlarından otomasyon çözümlerine kadar, ihtiyacınıza özel web tabanlı uygulamalar geliştiriyoruz.",
       },
       {
-        question: "Site ne kadar sürede yayına hazır olur?",
+        question: "Uygulama ne kadar sürede kullanıma hazır olur?",
         answer:
-          "Kapsam ve entegrasyon sayısına göre değişir, standart bir Shopify kurulumu genellikle 3-4 haftada tamamlanır.",
+          "Kapsam ve entegrasyon sayısına göre değişir, standart bir uygulama genellikle 3-6 haftada kullanıma hazır hale gelir.",
       },
       {
-        question: "SEO çalışması dahil mi?",
+        question: "Mevcut bir uygulamamızı geliştirebilir misiniz?",
         answer:
-          "Teknik SEO altyapısını (hız, yapılandırılmış veri, mobil uyum) kuruyoruz; içerik SEO'su ayrı bir hizmet olarak planlanabilir.",
+          "Evet, sıfırdan geliştirme kadar mevcut uygulamaların performans ve kullanılabilirlik odaklı revizyonunu da yapıyoruz.",
       },
       {
         question: "Kurulum sonrası destek veriyor musunuz?",
