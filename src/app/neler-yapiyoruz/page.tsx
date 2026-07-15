@@ -39,7 +39,7 @@ const services: Service[] = [
       "Dijital mecraların dinamiklerine uygun, kullanıcı etkileşimini en üst seviyeye çıkaran video ve görsel içerikler geliştiriyoruz. UGC ve AIGC yaklaşımlarımızla, marka kimliğinizle tamamen uyumlu ve dönüşüm odaklı kreatif çözümler üretiyoruz.",
     image: "/images/yaratici-prod.png",
     stats: [
-      { value: "34%", label: "Hook Rate", sub: "+ 22pp" },
+      { value: "22%", label: "ThruPlay", sub: "Video Tamamlanma" },
       { value: "+89%", label: "Watch Time", sub: "Öncekine Oranla" },
       { value: "+156%", label: "Kreatif CTR", sub: "60 Günde" },
     ],
@@ -60,12 +60,12 @@ const services: Service[] = [
     title: "Dijital Ürün ve Çözümler",
     href: "/hizmetler/dijital-urun-ve-cozumler",
     description:
-      "Shopify mağaza kurulumu ve dönüşüm oranı optimizasyonu (CRO) süreçlerinizi uçtan uca kurguluyoruz. Teknik altyapı entegrasyonları ve kullanıcı deneyimi iyileştirmeleriyle markanızın dijital varlığını ve satış performansını güçlendiriyoruz.",
+      "İnsanların gerçek ihtiyaçlarına yönelik, verimliliği artıran ve iş süreçlerini kolaylaştıran web tabanlı uygulamalar geliştiriyoruz. Hazır çözümler yerine işletmenizin gerçek süreçlerine göre kurgulanan özel uygulamalarla operasyonel verimliliği ve yatırım getirisini artırıyoruz.",
     image: "/images/dijital-urun.png",
     stats: [
-      { value: "+68%", label: "Dönüşüm Artışı", sub: "CRO Sonrası" },
-      { value: "95+", label: "Sayfa Hızı", sub: "PageSpeed Skoru" },
-      { value: "+150%", label: "Satış Büyümesi", sub: "Launch Sonrası" },
+      { value: "+25%", label: "Verimlilik", sub: "Hazır Çözümlere Göre" },
+      { value: "%70", label: "İş Akışı", sub: "İyileşme Bildirimi" },
+      { value: "2-3 Yıl", label: "ROI Süresi", sub: "Operasyonel Kazançla" },
     ],
   },
   {

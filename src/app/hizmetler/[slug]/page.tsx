@@ -90,10 +90,10 @@ export default async function ServicePage({
                 <Image
                   src={service.approachImage}
                   alt=""
-                  width={544}
-                  height={392}
+                  width={1920}
+                  height={1080}
                   quality={100}
-                  className="w-full max-w-md rounded-2xl border border-foreground/10"
+                  className="w-full rounded-2xl border border-foreground/10"
                 />
               )}
               {service.approach.slice(1).map((p) => (
